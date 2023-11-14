@@ -1,0 +1,45 @@
+;;;1NF;;;;;
+Jual;;;;;;;;
+No_Jual;Tgl_Jual;Kode_brg;Nama_brg;Harga;id_customer;nama_customer;qty_penjualan;
+i001;02/03/2020;b001;Lemari;1300000;c001;Ryan;1;
+i002;02/12/2020;b002;Kulkas;23000000;c002;Ryan;2;
+i003;2/13/2020;b003;Lemari;1300000;c003;Mozes;1;
+;;;;;;;;
+;;;;;;;;
+;;;;;2NF;;;
+;;Tabel Barang;;;;; Tabel Customer;
+;;Kode_brg;Nama_brg;Harga;;;id_customer;nama_customer
+;;b001;Lemari;1300000;;;c001;Ryan
+;;b002;Kulkas;23000000;;;c002;Ryan
+;;b003;Lemari;1300000;;;c003;Mozes
+;;;;;;;;
+;;;;;;;;
+;;;;Tabel Penjualan;;;;
+;;;;No_Jual;Tgl_Jual;Kode_brg;id_customer;
+;;;;i001;02/03/2020;b001;c001;
+;;;;i002;02/12/2020;b002;c002;
+;;;;i003;02/13/2020;b003;c003;
+;;;;;;;;
+;;;;;;;;
+;;;;;3NF;;;
+;;Tabel Barang;;;;;Tabel Customer;
+;;Kode_brg;Nama_brg;Harga;;;id_customer;nama_customer
+;;b001;Lemari;1300000;;;c001;Ryan
+;;b002;Kulkas;23000000;;;c002;Ryan
+;;b003;Lemari;1300000;;;c003;Mozes
+;;;;;;;;
+;;;;;;;;
+;;;;Penjualan;;;;
+;;;;No_Jual;Tgl_Jual;id_customer;;
+;;;;i001;02/03/2020;c001;;
+;;;;i002;02/12/2020;c002;;
+;;;;i003;02/13/2020;c003;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;Tabel Detail_Penjualan;;;;;;
+;;No_Jual;Kode_brg;qty_penjualan;;;;
+;;i001;b001;1;;;;
+;;i002;b002;2;;;;
+;;i003;b003;1;;;;
